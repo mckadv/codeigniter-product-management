@@ -34,7 +34,6 @@ class Products_model extends CI_Model
                 'price' => $post['price'],
                 'weight' => $data['weight'],
                 'categories' => $post['categories'],
-                'stock' => $post['stock'],
                 'stock' => $post['stock']
             ))) {
             log_message('error', print_r($this->db->error(), true));
@@ -50,7 +49,6 @@ class Products_model extends CI_Model
                 'price' => $post['price'],
                 'weight' => $data['weight'],
                 'categories' => $post['categories'],
-                'stock' => $post['stock'],
                 'stock' => $post['stock']
                 ))) {
             log_message('error', print_r($this->db->error(), true));
