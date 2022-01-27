@@ -35,7 +35,7 @@ class Products extends CI_Controller
    		if ($id > 0 && $_POST == null)
 			$data['product'] = $this->Products_model->getProduct($id);
         
-		if ( isset($_POST['submit']) ) {
+		if ( isset($_POST['submit'] && $_POST['submit'] = 'Registrar') ) {
             $post = array(
                 'name' => $this->input->post('name'),
                 'reference' => $this->input->post('reference'),
@@ -46,11 +46,13 @@ class Products extends CI_Controller
             );            
             $add = $this->Products_model->addProduct($post);           	
             if(isset($add)) {
-                $this->session->set_flashdata('result_publish', 'Nuevo producto publicado');
+                $this->session->set_flashdata('result_publish', 'Nuevo producto registrado');
             } else {
                 $this->session->set_flashdata('result_publish', 'Error al crear producto');
             }
-        }
+        } else if ( isset($_POST['submit'] && $_POST['submit'] = 'Editar') ) {
+			$this->delProduct($this->input->post('id'))
+		}
                     
         $this->load->view('header');
         $this->load->view('addproduct', $data);
