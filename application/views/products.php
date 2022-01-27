@@ -38,8 +38,8 @@
                 <td><?php echo $row->weight ?></td>
                 <td><?php echo $row->categories ?></td>
                 <td><?php echo $row->stock ?></td>
-                <td><a class="btn btn-warning" href="<?php echo base_url() ."products/update/" . $row->id ?>"><i class="fa fa-edit"></i></a></td>
-                <td><a class="btn btn-danger" href="<?php echo base_url() ."products/delete/" . $row->id ?>"><i class="fa fa-trash"></i></a></td>
+                <td><a class="btn btn-primary" href="<?php echo base_url() ."products/addproduct/" . $row->id ?>"><i class="fa fa-edit"></i></a></td>
+                <td><a class="btn btn-warning" href="<?php echo base_url() ."products/addproduct/" . $row->id ?>"><i class="fa fa-trash"></i></a></td>
             </tr>
             <?php } ?>
         </tbody>
