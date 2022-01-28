@@ -41,7 +41,9 @@
                 <td><?php echo $row->stock ?></td>
                 <td><a class="btn btn-primary" href="<?php echo base_url() ."products/addproduct/" . $row->id ?>"><i class="fa fa-edit"></i></a></td>
                 <td><a class="btn btn-warning" href="<?php echo base_url() ."products/addproduct/" . $row->id ?>"><i class="fa fa-trash"></i></a></td>
-		<td><a class="btn btn-success" href="<?php echo base_url() ."products/sellproduct/" . $row->id ?>"><i class="fa fa-opencart"></i></a></td>
+		<td>
+		  <a class="btn btn-success" href="<?php echo base_url() ."products/cartProduct/" . $row->id . "/" . $row->price ?>"><i class="fa fa-opencart"></i></a>
+		</td>
             </tr>
             <?php } ?>
         </tbody>
