@@ -59,11 +59,8 @@ class Products extends CI_Controller
         $this->load->view('footer');
     }
     
-    public function cartProduct($id)
-    {
-	$id = $this->input->post('id');
-	$price = $this->input->post('prive');
-	    
+    public function cartProduct($id, $price)
+    {    
         if(!$this->session->has_userdata('cart')) {
 	  $cart = array());
 	} else {
