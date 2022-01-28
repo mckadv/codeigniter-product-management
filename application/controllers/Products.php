@@ -57,5 +57,28 @@ class Products extends CI_Controller
         $this->load->view('header');
         $this->load->view('addproduct', $data);
         $this->load->view('footer');
-    } 
+    }
+    
+    public function cartProduct($id)
+    {
+	$id = $this->input->post('id');
+	$price = $this->input->post('prive');
+	    
+        if(!$this->session->has_userdata('cart')) {
+	  $cart = array());
+	} else {
+          $cart = $this->session->cart;
+	}
+	    
+	$added = array(
+	    'id' => $id,
+	    'quantity' => 1,
+	    'price' => $price
+	));
+	    
+        array_push($cart, $added);
+        $this->session->set_userdata('cart', $cart);	    
+        $this->session->set_flashdata('result_cart', 'El producto ha sido añadido al carrito!');
+        redirect('products/');
+    }
 }
