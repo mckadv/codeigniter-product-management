@@ -1,4 +1,4 @@
-# Gestión de productos en almacén basado en Codeigniter
+# Gestión de inventarios basado en Codeigniter
 Este proyecto esta basado en framework CodeIgniter 3.1.11, Bootstrap 3.x, PHP y MySQL, permite la creación, edición y eliminación de productos así como listar todos los productos registrados en el sistema.
 
 ### Instalación
